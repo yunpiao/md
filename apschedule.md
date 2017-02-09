@@ -23,7 +23,7 @@ def my_job():![enter description here][1]
     print 'hello world'
 
 sched = BlockingScheduler()
-sched.add_job(my_job, 'interval', seconds=5)
+sched.add_job(my_job, 'interval', seconds=5)![enter description here][2]
 sched.start()
 1
 2
@@ -313,3 +313,4 @@ http://apscheduler.readthedocs.org/en/3.0/userguide.html
 
 
   [1]: https://www.github.com/yunpiao/md/raw/master/1486628403843.jpg "1486628403843.jpg"
+  [2]: https://www.github.com/yunpiao/md/raw/master/1486628461510.jpg "1486628461510.jpg"

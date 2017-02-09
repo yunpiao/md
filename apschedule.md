@@ -19,7 +19,7 @@ APScheduler提供了许多不同的方式来配置调度器，你可以使用一
 
 
 from apscheduler.schedulers.blocking import BlockingScheduler
-def my_job():
+def my_job():![enter description here][1]
     print 'hello world'
 
 sched = BlockingScheduler()
@@ -310,3 +310,6 @@ sched.add_job(my_job, 'date', run_date=datetime(2009, 11, 6, 16, 30, 5), args=['
 Ref:
 http://apscheduler.readthedocs.org/en/latest/modules/triggers
 http://apscheduler.readthedocs.org/en/3.0/userguide.html
+
+
+  [1]: https://www.github.com/yunpiao/md/raw/master/1486628403843.jpg "1486628403843.jpg"

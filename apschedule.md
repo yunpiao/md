@@ -17,7 +17,7 @@ pip install apscheduler
 APScheduler提供了许多不同的方式来配置调度器，你可以使用一个配置字典或者作为参数关键字的方式传入。你也可以先创建调度器，再配置和添加作业，这样你可以在不同的环境中得到更大的灵活性。
 下面是一个简单使用BlockingScheduler，并使用默认内存存储和默认执行器。(默认选项分别是MemoryJobStore和ThreadPoolExecutor，其中线程池的最大线程数为10)。配置完成后使用start()方法来启动。
 
-
+![enter description here][1]
 from apscheduler.schedulers.blocking import BlockingScheduler
 def my_job():
     print 'hello world'
@@ -312,5 +312,4 @@ http://apscheduler.readthedocs.org/en/latest/modules/triggers
 http://apscheduler.readthedocs.org/en/3.0/userguide.html
 
 
-  [1]: https://www.github.com/yunpiao/md/raw/master/1486628403843.jpg "1486628403843.jpg"
-  [2]: https://www.github.com/yunpiao/md/raw/master/1486628461510.jpg "1486628461510.jpg"
+  [1]: https://www.github.com/yunpiao/md/raw/master/1486629088564.jpg "1486629088564.jpg"

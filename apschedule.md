@@ -19,11 +19,11 @@ APScheduler提供了许多不同的方式来配置调度器，你可以使用一
 
 
 from apscheduler.schedulers.blocking import BlockingScheduler
-def my_job():![enter description here][1]
+def my_job():
     print 'hello world'
 
 sched = BlockingScheduler()
-sched.add_job(my_job, 'interval', seconds=5)![enter description here][2]
+sched.add_job(my_job, 'interval', seconds=5)
 sched.start()
 1
 2

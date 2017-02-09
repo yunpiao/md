@@ -136,31 +136,31 @@ except SystemExit:
 # 操作作业
 
 ```python
- 添加作业:
+ # 添加作业:
  @sched.scheduled_job('cron', id='my_job_id', day='last sun')
  def some_decorated_task():
 	 pass
 job.remove()
 scheduler.remove_job('my_job_id')
-暂停作业:
+# 暂停作业:
 apscheduler.job.Job.pause()
 apscheduler.schedulers.base.BaseScheduler.pause_job()
-恢复作业:
+# 恢复作业:
 apscheduler.job.Job.resume()
 apscheduler.schedulers.base.BaseScheduler.resume_job()
-获得job列表
+# 获得job列表
 get_jobs()
 print_jobs()
-修改作业
+# 修改作业
 def some_decorated_task():
     print("I am printed at 00:00:00 on the last Sunday of every month!") 
-关闭作业
+# 关闭作业
 scheduler.shutdown()
 scheduler.shutdown(wait=False)
-作业运行的控制
-add_job的第二个参数是trigger，
-它管理着作业的调度方式。
-它可以为date, interval或者cron。对于不同的trigger，对应的参数也相同。
+# 作业运行的控制
+# add_job的第二个参数是trigger，
+# 它管理着作业的调度方式。
+# 它可以为date, interval或者cron。对于不同的trigger，对应的参数也相同。
 
 (1). cron定时调度
 year (int|str) – 4-digit year

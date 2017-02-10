@@ -3,6 +3,7 @@ title: 2017-2-10 Grequest 记录
 tags: greques
 grammar_cjkRuby: true
 ---
+# Grequest 记录
 
 ```python
 # 这种写法会造成程序崩溃
@@ -40,27 +41,6 @@ for i in grequests.imap(gen, size=200):
         urls.append(k)
         
 
-import  grequests
-import time
-
-start_time = time.time()
-
-proxies = {
-  "http": "http://127.0.0.1:1080",
-  "https": "https://127.0.0.1:1080",
-}
-
-urls = [
-        "http://www.baidu.com",
-        "http://www.google.com",
-    ]
-
-rs = (grequests.get(u, timeout=3, proxies=proxies) for u in urls)
-for r in grequests.imap(rs, size=200):
-    print(r.content)
-
-duration = time.time() - start_time
-print ('pycurl takes %s seconds  ' % (duration))
 
 ```
 

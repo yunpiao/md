@@ -1,0 +1,56 @@
+---
+title: 2017-2-10 grequest 记录
+tags: greques
+grammar_cjkRuby: true
+---
+
+```python
+
+import re
+import requests
+import grequests
+
+proxies = {
+  "http": "http://127.0.0.1:1080",
+}
+
+pattern = re.compile(r'((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+')
+def get_url(html):
+    m = re.findall(r'(https|http?:\/\/[^\s]+.com|cn|org)', html)
+    # m = re.findall(r'^https?://[\d\-a-zA-Z]+(\.[\d\-a-zA-Z]+)*/?$', html)
+    return (m)
+
+html= requests.get("http://www.best918.com/").text
+urls = get_url(html)
+gen = (grequests.get(i, proxies=proxies, timeout=3)  for i in urls)
+for i in grequests.imap(gen, size=200):
+    print(i.url)
+    for k in get_url(i.text):
+        urls.append(k)
+        
+
+import  grequests
+import time
+
+start_time = time.time()
+
+proxies = {
+  "http": "http://127.0.0.1:1080",
+  "https": "https://127.0.0.1:1080",
+}
+
+urls = [
+        "http://www.baidu.com",
+        "http://www.google.com",
+    ]
+
+rs = (grequests.get(u, timeout=3, proxies=proxies) for u in urls)
+for r in grequests.imap(rs, size=200):
+    print(r.content)
+
+duration = time.time() - start_time
+print ('pycurl takes %s seconds  ' % (duration))
+
+```
+
+

@@ -17,7 +17,7 @@ for r in grequests.imap(rs, size=200):
 
 
 ```python 
-# 爬去url 中的 url
+# 爬取url 中的 url
 
 import re
 import requests

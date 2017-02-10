@@ -5,10 +5,11 @@ grammar_cjkRuby: true
 ---
 
 ```python
+## 以上写法会造成程序崩溃
 rs = (grequests.get(url) for url in url_chunk)
 res_items = grequests.map(rs, timeout=10s) # this is the item that times out
 ```
-## 以上写法会造成程序崩溃
+
 
 ```python
 

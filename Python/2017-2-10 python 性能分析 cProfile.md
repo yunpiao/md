@@ -16,7 +16,6 @@ grammar_cjkRuby: true
 
 
 
-# 性能分析
 
 ## 内置cProfile
 

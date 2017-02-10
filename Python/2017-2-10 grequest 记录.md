@@ -9,6 +9,12 @@ GRequests: Asynchronous Requests
 GRequests allows you to use Requests with Gevent to make asynchronous HTTP Requests easily.
 异步请求 GRequests允许您使用具有Gevent的Requests轻松地进行异步HTTP请求。
 
+
+## 安装  
+> pip install grequests
+
+## 优化
+
 ```python
 # 这种写法会造成程序崩溃
 rs = (grequests.get(url) for url in url_chunk)
@@ -19,7 +25,7 @@ rs = (grequests.get(u, timeout=3, proxies=proxies) for u in urls)
 for r in grequests.imap(rs, size=200):
     print(r.content)
 ```
-
+# 事例
 
 ```python 
 # 爬取url 中的 url

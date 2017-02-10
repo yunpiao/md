@@ -4,6 +4,10 @@ tags: greques
 grammar_cjkRuby: true
 ---
 # Grequest 记录
+GRequests: Asynchronous Requests
+
+GRequests allows you to use Requests with Gevent to make asynchronous HTTP Requests easily.
+异步请求 GRequests允许您使用具有Gevent的Requests轻松地进行异步HTTP请求。
 
 ```python
 # 这种写法会造成程序崩溃

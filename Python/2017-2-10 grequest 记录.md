@@ -3,6 +3,10 @@ title: 2017-2-10 Grequest 记录
 tags: greques
 grammar_cjkRuby: true
 ---
+```python
+rs = (grequests.get(url) for url in url_chunk)
+res_items = grequests.map(rs, timeout=10s) # this is the item that times out
+```
 
 ```python
 

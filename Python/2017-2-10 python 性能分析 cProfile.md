@@ -33,5 +33,13 @@ def test():
     return total
  
 if __name__ == "__main__":
-    test()
+   import cProfile
+ 
+    # 直接把分析结果打印到控制台
+    cProfile.run("test()")
+    # 把分析结果保存到文件中
+    cProfile.run("test()", filename="result.out")
+    # 增加排序方式
+    cProfile.run("test()", filename="result.out", sort="cumulative")
+
 ```

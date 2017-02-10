@@ -5,9 +5,14 @@ grammar_cjkRuby: true
 ---
 
 ```python
-## 以上写法会造成程序崩溃
+# 这种写法会造成程序崩溃
 rs = (grequests.get(url) for url in url_chunk)
 res_items = grequests.map(rs, timeout=10s) # this is the item that times out
+
+# 这样写可以优化性能
+rs = (grequests.get(u, timeout=3, proxies=proxies) for u in urls)
+for r in grequests.imap(rs, size=200):
+    print(r.content)
 ```
 
 

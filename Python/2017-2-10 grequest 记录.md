@@ -16,7 +16,8 @@ for r in grequests.imap(rs, size=200):
 ```
 
 
-```python
+```python 
+# 爬去url 中的 url
 
 import re
 import requests
@@ -26,10 +27,8 @@ proxies = {
   "http": "http://127.0.0.1:1080",
 }
 
-pattern = re.compile(r'((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+')
 def get_url(html):
     m = re.findall(r'(https|http?:\/\/[^\s]+.com|cn|org)', html)
-    # m = re.findall(r'^https?://[\d\-a-zA-Z]+(\.[\d\-a-zA-Z]+)*/?$', html)
     return (m)
 
 html= requests.get("http://www.best918.com/").text

@@ -13,3 +13,25 @@ grammar_cjkRuby: true
 > profile：纯Python实现的性能分析模块，接口和cProfile一致。但在分析程序时增加了很大的运行开销。不过，如果你想扩展profiler的功能，可以通过继承这个模块实现； 
 
 > hotshot：一个试验性的C模块，减少了性能分析时的运行开销，但是需要更长的数据后处理的次数。目前这个模块不再被维护，有可能在新版本中被弃用。 
+
+```python
+def sum_num(max_num):
+    total = 0
+    for i in range(max_num):
+        total += i
+    return total
+ 
+ 
+def test():
+    total = 0
+    for i in range(40000):
+        total += i
+ 
+    t1 = sum_num(100000)
+    t2 = sum_num(400000)
+ 
+    return total
+ 
+if __name__ == "__main__":
+    test()
+```
